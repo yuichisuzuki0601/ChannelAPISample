@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>ChannelAPISample</title>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+	<label for="device-id">あなたの端末ID:</label>
+	<span id="device-id"></span>
+	<hr>
+	<div id="enter-room">
+		<label for="enter-room-id">部屋ID:</label>
+		<input id="enter-room-id" type="text" placeholder="部屋IDを入力してください" />
+		<button id="btn-enter-room">部屋に入る</button>
+	</div>
+	<div id="current-room">
+		<label for="current-room-id">入室中の部屋ID:</label>
+		<span id="current-room-id"></span>
+		<hr>
+		<label for="join-devices">入室中の端末ID一覧:</label>
+		<div id="join-devices"></div>
+		<hr>
+		<label for="receive">受信メッセージ:</label>
+		<div id="receive"></div>
+		<hr>
+		<label for="send">送信メッセージ:</label>
+		<input id="send" placeholder="送信メッセージを入力してください" />
+		<button id="btn-send">送信</button>
+	</div>
+</body>
+<!-- 1.jQueryは便利だから読み込む -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- 2.このURLでChannelAPIに必要な接続スクリプトを読み込む -->
+<script src="/_ah/channel/jsapi"></script>
+<script src="common.js"></script>
+<!-- 3.部屋に入るための自作接続クラス -->
+<script src="room-connector.js"></script>
+<!-- 4.自作接続クラスを扱うスクリプト -->
+<script src="index.js"></script>
+</html>
