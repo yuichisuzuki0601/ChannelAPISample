@@ -1,0 +1,2 @@
+# ChannelAPISample
+GoogleAppEngineのChannelAPIのサンプルプロジェクト
